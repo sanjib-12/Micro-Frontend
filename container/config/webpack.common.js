@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 // Export Webpack configuration object
 module.exports = {
    module: {
@@ -31,5 +33,10 @@ module.exports = {
             }
          }
       ]
-   }
+   },
+   plugins:[
+      new HtmlWebpackPlugin({
+         template: './public/index.html'
+      })
+   ]
 };
